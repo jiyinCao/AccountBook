@@ -32,20 +32,12 @@ namespace AccountBook
         }
        
 
-        /// <summary>
-        /// 判断独立存储设置是否存在
-        /// </summary>
-        /// <param name="key">键</param>
-        /// <returns>是否存在</returns>
+        
         public static bool Exist(string key)
         {
             return GetDataContainer().Values.Keys.Contains(key);
         }
-        /// <summary>
-        /// 获取独立存储设置的值
-        /// </summary>
-        /// <param name="key">键</param>
-        /// <returns>键的值</returns>
+       
         public static object Load(string key)
         {
             if (Exist(key))
@@ -54,11 +46,7 @@ namespace AccountBook
             }
             return null;
         }
-        /// <summary>
-        /// 保存独立存储设置的值
-        /// </summary>
-        /// <param name="key">键</param>
-        /// <param name="obj">键的值</param>
+        
         public static void Save(string key, object obj)
         {
             GetDataContainer().Values[key] = obj; 
